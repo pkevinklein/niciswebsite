@@ -39,7 +39,7 @@
 
             <a href="./singer.html" class="font-medium text-gray-500 hover:text-gray-900">Singer</a>
 
-            <a href="./voiceactress.html" class="font-medium text-gray-500 hover:text-gray-900">Voiceactress</a>
+            <a href="./voiceactress.html" class="font-medium text-gray-500 hover:text-gray-900">Voice Actress</a>
 
             <a href="./yoga.html" class="font-medium text-gray-500 hover:text-gray-900">Yoga</a>
 
@@ -74,37 +74,60 @@
             </div>
           </div>
           <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+            <a href="./singer.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Singer</a>
 
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+            <a href="./voiceactress.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Voice Actress</a>
 
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+            <a href="./yoga.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Yoga</a>
           </div>
         </div>
       </div>
 
       <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">INSERT AN INPUT TEXT HERE</span>
-            <span class="block text-indigo-600 xl:inline">online business</span>
-          </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-          </p>
+          <div class="container mx-auto">
+            <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                <div class="text-center">
+                    <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Contact Us</h1>
+                    <p class="text-gray-400 dark:text-gray-400">Fill up the form below to send us a message.</p>
+                </div>
+                <div class="m-7">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+      
+                        <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+      
+      
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        </div>
+                        <div class="mb-6">
+      
+                            <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
+                            <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+      
+                            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Send Message</button>
+                        </div>
+                        <p class="text-base text-center text-gray-400" id="result">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <!-- <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                Get started
-              </a>
-            </div> -->
-            <!-- <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
-                Live demo
-              </a>
-            </div> -->
+
           </div>
         </div>
       </main>
@@ -114,6 +137,58 @@
     <img class="px-8 py-12 max-w-md mx-auto object-center sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2" src="./assets/picture3.jpg" alt="">
   </div>
 </div>
+
+
+  
+</div>
+
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+  var object = {};
+  formData.forEach((value, key) => {
+      object[key] = value
+  });
+  var json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+  fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: json
+      })
+      .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+              result.innerHTML = json.message;
+               result.classList.remove('text-gray-500');
+              result.classList.add('text-green-500');
+          } else {
+              console.log(response);
+              result.innerHTML = json.message;
+               result.classList.remove('text-gray-500');
+               result.classList.add('text-red-500');
+          }
+      })
+      .catch(error => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+      })
+      .then(function() {
+          form.reset();
+          setTimeout(() => {
+              result.style.display = "none"; 
+          }, 5000);
+      });
+})
+</script>
 <footer class="footer bg-white relative pt-1 border-b-2 border-blue-700">
   <div class="container mx-auto px-6">
 
@@ -149,6 +224,19 @@
       </div>
   </div>
 </footer>
+
+<!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+    Surjith S M (@surjithctly)
+    =======================================================================
+ -->
+
 </body>
 </html>
 
