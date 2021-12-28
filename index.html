@@ -1,206 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Meta Tags For Seo + Page Optimization -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicole Widiger</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Themes Industry">
+    <!-- description -->
+    <meta name="description" content="Norex is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and HTML5 template with 14 ready home page demos.">
+    <!-- keywords -->
+    <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, faq">
+    <!-- Page Title -->
+    <title>Nicole Widiger | Sprecherin </title>
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="agency/img/favicon.ico"> -->
+    <!--css links-->
+    <link rel="stylesheet" href="vendor/css/bundle.min.css">
+    <link rel="stylesheet" href="vendor/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="vendor/css/wow.css">
+    <link rel="stylesheet" href="vendor/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/css/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="agency/css/line-awesome.min.css">
+    <link rel="stylesheet" href="agency/css/settings.css">
+   <link rel="stylesheet" href="agency/css/slider.css">
+    <link rel="stylesheet" href="agency/css/style.css">
+    <link rel="stylesheet" href="agency/css/color.css">
+
 </head>
-<body class="">
-    <div class="relative bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto">
-    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-      <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polygon points="50,0 100,0 50,100 0,100" />
-      </svg>
-      <!-- extra -->
-      <div id="ex">
-      <div v-if="!isOpen" class="relative pt-6 px-4 sm:px-6 lg:px-8">
-        <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-          <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-            <div class="flex items-center justify-between w-full md:w-auto">
-              <a href="./index.html">
-                <span class="sr-only">Workflow</span>
-                <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
-              </a>
-              <div  class="-mr-2 flex items-center md:hidden">
-                <button type="button" @click="open()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <!-- Heroicon name: outline/menu -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+<body data-spy="scroll" data-target=".navbar" data-offset="100" data-navbar="sticky">
 
-            <a href="./singer.html" class="font-medium text-gray-500 hover:text-gray-900">Singer/Songwriter</a>
 
-            <a href="./yoga.html" class="font-medium text-gray-500 hover:text-gray-900">Yoga</a>
-            
-            <a href="./uebermich.html" class="font-medium text-gray-500 hover:text-gray-900">Über mich</a>
-
-          </div>
-        </nav>
-      </div>
-
-      <!--
-        Mobile menu, show/hide based on menu open state.
-
-        Entering: "duration-150 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
-      <div v-if="isOpen" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right duration-150 ease-out md:hidden">
-        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-          <div class="px-5 pt-4 flex items-center justify-between">
-            <div>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-            </div>
-            <div class="-mr-2">
-              <button type="button" @click="open()" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                <span class="sr-only">Close main menu</span>
-                <!-- Heroicon name: outline/x -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="./singer.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Singer/Songwriter</a>
-
-            <a href="./uebermich.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Über mich</a>
-
-            <a href="./yoga.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Yoga</a>
-          </div>
-        </div>
-      </div>
-      <!-- extra -->
+<!--loading start-->
+<div class="loader">
+    <div class="loaders" >
+        <div class="l" id="l-1"><i></i></div>
+        <div class="l" id="l-2"><i></i></div>
+        <div class="l" id="l-3"><i></i></div>
+        <div class="l" id="l-4"><i></i></div>
+        <div class="l" id="l-5"><i></i></div>
+        <div class="l" id="l-6"><i></i></div>
+        <div class="l" id="l-7"><i></i></div>
+        <div class="l" id="l-8"><i></i></div>
     </div>
-      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-        <div class="sm:text-center lg:text-left">
-          <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block text-red-500 xl:inline">Hallo, ich bin Nicole♡</span>
-          </h1>
-        <div class="flex flex-col mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-          <h1 class="text-base tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block text-4xl text-gray-500 xl:inline">
-              <!-- Ausbildungen -->
-            </span>
-          </h1>
-          <ul class="text-justify" role="list">
-            <li class="mt-3 text-base text-red-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"> 
-              Wie schön, dass du meine Website besuchst. Songtexte schreiben und diese singen, sind einer meiner größten Leidenschaften. 
-            </li>  
-              <li class="mt-3 text-base text-red-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"> Durch die Musik bin ich auf die andere Form des Ausdrucks gekommen. Das professionelle Sprechen für Aufnahmen aller Art. Ganz besonders für mich sind Hörbücher. </li>
-              <li class="mt-3 text-base text-red-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"> In den letzten 6 Jahren habe ich zu Hause in Berlin, in Bali und in Thailand, Yoga praktiziert und es buchstäblich in mich aufgesaugt. In 2020 konnte ich nicht anders, als Yogalehrerin werden. Seitdem ist und bleibt es mein treuer Begleiter.</li>  
-            </ul>
-            </div>
-            <div class="">
-              <div class="h-2 bg-red-light"></div>
-              <div class="flex items-center justify-center bg-red-lightest">
-                <div class="bg-white shadow-lg rounded-lg" style="width: 45rem !important;">
-                  <div class="flex flex-col">
-                    <div class="w-full p-8 shadow-lg">
-                      <div class="flex flex-col justify-between">
-                          <!-- <h2 class="text-5xl text-grey-darkest font-medium">Demos</h2> -->
-                          <p class="text-2xl text-sm text-grey mt-1"><strong>Präsentation</strong></p>
-                          <div class="flex justify-center">
-                          <audio  controls controlsList="nodownload">
-                            <source src="./assets/audio1.mp3" type="audio/mpeg">
-                          Your browser does not support the audio element.
-                          </audio>
-                          </div>
-                        </br>
-                        <p class="text-2xl text-sm text-grey mt-1"><strong>Werbung</strong></p>
-                        <div class="flex justify-center">
-                          <audio controls controlsList="nodownload">
-                            <source src="./assets/audio2.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio>
-                        </div>
-                        </br>
-                      </div>
-                      <p class="text-2xl text-sm text-grey mt-1"><strong>Anrufbeantworter</strong></p>
-                      <div class="flex justify-center">
-                        <audio controls controlsList="nodownload">
-                          <source src="./assets/audio3.mp3" type="audio/mpeg">
-                          Your browser does not support the audio element.
-                        </audio>
-                      </div>
-                    </br>
-                    <p class="text-2xl text-sm text-grey mt-1"><strong>Dokumentation</strong></p>
-                    <div class="flex justify-center">
-                      <audio controls controlsList="nodownload">
-                        <source src="./assets/audio4.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                      </audio>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div class="mt-3 sm:mt-0 sm:ml-3">
-                <a href="./contact.html" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md hover:text-white text-red-500 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
-                  Buche mich!
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <img class="w-screen object-cover max-w-md mx-auto object-center sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2" src="./assets/picture8.jpg" alt="">
-  </div>
 </div>
-<footer class="footer bg-white relative pt-1 border-b-2 border-blue-700">
-  <div class="container mx-auto px-6">
+<!--loading end-->
 
-      <div class="sm:flex sm:mt-8">
-          <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
-              <div class="flex flex-col">
-                  <!-- <span class="font-bold text-gray-700 uppercase mb-2">Footer header 1</span> -->
-                  <span class="my-2"><a href="./impressum.html" class="text-gray-900  text-md hover:text-blue-500">Impressum</a></span>
-              </div>
-              <div class="flex flex-col">
-                  <span class="my-2"><a href="https://www.facebook.com/Nici-Laz-198074737460672" class="text-gray-900 text-md hover:text-blue-500">Facebook</a></span>
+<!--bottom Arrow start-->
+<div class="bottom-arr scroll-top-arrow">
+    <i class="las la-angle-up"></i>
+</div>
+<!--bottom Arrow end-->
+
+<!--header sec start-->
+<header id="home" class="header-style4 header-style8">
+    <div class="upper-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 mt-auto mb-auto d-none d-lg-block">
+                </div>
+                <div class="col-12 col-lg-6 mt-auto mb-auto">
+                    <ul class="top-detail d-block d-lg-flex justify-content-center justify-content-lg-end">
+                        <li class="d-none d-lg-block"><span><i class="la la-mobile"></i></span><a href="#">+(49)152 02409460</a></li>
+                        <li class="d-none d-lg-block"><span><i class="la la-envelope"></i></span><a href="#">booking@nicolewidiger.com</a></li>
+                        <li class="social-links">
+                            <span class="insta"><a href="https://www.instagram.com/nicilazaridi/" target="_blank" ><i class="la la-instagram"></i></a></span>
+                        </li>
+                    </ul>
+                    <div class="toggle-btn d-block d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lower-nav lower-nav-style4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-block">
+                <div class="main-nav collapse navbar-collapse d-flex">
+                    <!-- <a class="navbar-brand" href="#"><img src="agency/img/NicoleWidiger.png" alt="logo"></a> -->
+                    <ul class="navbar-nav right-nav d-flex  ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#our-services">ÜBERBLICK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#footer-sec">KONTAKT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="toggle-btn toggle-btn-lg d-none d-lg-block">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="broad">
+          <div class="close-nav"><i class="las la-times"></i></div>
+                <nav class="navbar navbar-light">
+                    <div class="main-nav collapse navbar-collapse d-flex justify-content-center align-items-center">
+                        <ul class="navbar-nav text-center">
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#home">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#our-services">ÜBERBLICK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#portfolio">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#footer-sec">KONTAKT</a>
+                            </li>
+                        </ul>
+                    </div>
+               </nav>
+        </div>
+</header>
+
+<!--header sec end-->
+
+<!--slider sec start-->
+<div id="slider-section" class="slider-section slider-style-4 slider-style-8">
+
+    <!-- START REVOLUTION SLIDER -->
+    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="norex-agency01" data-source="gallery" style="background:transparent;padding:0;">
+        <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
+        <div id="rev_slider_1_2" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+            <ul>	<!-- SLIDE  -->
+                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500,1500"  data-thumb="assets/50x50_d6aeb-slide1-org.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="niciRecording.jpg"  alt="Nicole Widiger"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
+                         id="slide-1-layer-26"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                         data-fontweight="['100','100','300','300']"
+                         data-width="full"
+                         data-height="full"
+                         data-whitespace="nowrap"
+
+                         data-type="shape"
+                         data-basealign="slide"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":300,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 5;background-color:rgba(20,32,34,0.60);"> </div>
+
+                    <!-- LAYER NR. 2 -->
+        
+           
+                    <div class="tp-caption   tp-resizeme"
+                         id="slide-1-layer-22"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['30','30','48','48']"
+                         data-fontsize="['20','20','20','18']"
+                         data-lineheight="['22','22','26','26']"
+                         data-width="['none','none','532','420']"
+                         data-height="none"
+                         data-whitespace="['nowrap','nowrap','normal','normal']"
+
+                         data-type="text"
+                         data-responsive_offset="on"
+
+                         data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                         data-textAlign="['inherit','inherit','center','center']"
+                         data-paddingtop="[0,0,0,0]"
+                         data-paddingright="[0,0,0,0]"
+                         data-paddingbottom="[0,0,0,0]"
+                         data-paddingleft="[0,0,0,0]"
+
+                         style="z-index: 8; white-space: nowrap; font-size: 65x; line-height: 65px; font-weight: 700; color: #ffffff; letter-spacing:0;font-family:Futura, Arial, sans-serif;">
+                         <div class="main-slider-content mt-5">
+                            <h1 class="heading-text">Hi, ich bin Nicole Widiger, </br>professionelle Sprecherin und Musikerin.</h1>
+                        </div>
+                </div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+    </div><!-- END REVOLUTION SLIDER -->
+    <!-- END REVOLUTION SLIDER -->
+
+</div>
+
+
+
+<!--our-Services sec start-->
+<section id="our-services" class="our-services section-padding">
+    <div class="container">
+        <div class="row text-center text-md-left">
+            <div class="col-12 service-text text-center">
+                <div class="our-heading">
+                    <h4 class="heading-text">ÜBERBLICK</h4>
+                </div>
+                <ul class="nav nav-pills justify-content-center mb-md-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#p1" role="tab"  aria-selected="true"><span>ÜBER MICH</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#p2" role="tab" aria-selected="false"><span>PROFIL</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#p3" role="tab" aria-selected="false"><span>MEINE VISION FÜR IHR PROJEKTE</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 service-tab">
+                <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="p1" role="tabpanel" aria-labelledby="pills-1-tab">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 tab-img">
+                                <img alt="service1" src="niciFace.jpg">
+                            </div>
+                            <div class="col-sm-12 col-md-6 tab-detail d-flex align-items-center">
+                                <div class="tab-des">
+                                <p class="tab-text" style="font-size: 16px;">Ich lebe in Berlin und führe als Sprecherin ein ausgestattetes Tonstudio für professionelle Aufnahmen, wie Dokumentationen, Voice Over, Hörbücher usw.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade show" id="p2" role="tabpanel" aria-labelledby="pills-2-tab">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 tab-img">
+                                <img alt="service1" src="home-recording.jpg">
+                            </div>
+                            <div class="col-sm-12 col-md-6 tab-detail d-flex align-items-center">
+                                <div class="tab-des">
+                                    <p class="tab-text" style="font-size: 16px;">Warm, verführerisch und authentisch</br>
+                                        Stimmalter: 19-40</br>
+                                        Sprachen: Deutsch, englisch, russisch
+                                    </br></br> 
+                                        Ich bin offen für Ihre Wünsche und Anregungen. Gerne beantworte ich Ihre Fragen in einem Gespräch und erstelle Ihnen unverbindlich ein Angebot. 
+                                    </br> </br> 
+                                        Sie erhalten Ihre Aufnahme zeitnah, je nach Wunsch, roh oder bereits fertig bearbeitet. Über Wetransfer schicke ich Ihnen Ihre Aufnahmen zu.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade show" id="p3" role="tabpanel" aria-labelledby="pills-3-tab">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 tab-img">
+                                <img alt="service1" src="niciFace2.jpg">
+                            </div>
+                            <div class="col-sm-12 col-md-6 tab-detail d-flex align-items-center">
+                                <div class="tab-des">
+                                    <p class="tab-text" style="font-size: 16px;">Ich liebe und lebe Authentizität. Als nebenberufliche Yogalehrerin kenne ich die Bedeutung der Stimme und lege dabei großen Wert auf Ihre Wirkung. 
+                                    </br>
+                                        Daher ist meine Stimme ein Teil Ihres Projektes und darüber hinaus, eine große Verantwortung. Diese Wertschätzung trage ich in mir. 
+                                    </br></br>
+                                        Was ich mag: Musik, Gesang, tanzen, reisen, Yoga, Leichtigkeit und Balance im Leben.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
-              <div class="flex flex-col">
-                  <span class="my-2"><a href="https://www.instagram.com/nicilazaridi/" class="text-gray-900  text-md hover:text-blue-500">Instagram</a></span>
-              </div>
-              <div class="flex flex-col">
-                <span class="my-2"><a href="https://www.linkedin.com/in/nicole-widiger" class="text-gray-900  text-md hover:text-blue-500">LinkedIn</a></span>
             </div>
-            <div class="flex flex-col">
-              <span class="my-2"><a href="./contact.html" class="text-gray-900  text-md hover:text-blue-500">Kontakt</a></span>
-          </div>
-          </div>
-      </div>
-  </div>
-  <div class="container mx-auto px-6">
-      <div class="mt-8 border-t-2 border-gray-300 flex flex-col items-center">
-          <div class="sm:w-2/3 text-center py-6">
-              <p class="text-sm text-blue-700 font-bold mb-2">
-                  © 2021 by Kevin Klein
-              </p>
-          </div>
-      </div>
-  </div>
-</footer>
-<script type="text/javascript" src="index.js"></script>
+        </div>
+    </div>
+</section>
+<!--our-Services sec start-->
+
+<!--Services sec start-->
+<section id="services-sec" class="services-sec">
+    <div class="service-overlay"></div>
+    <div class="container">
+        <div class="row services-details section-padding">
+            
+        </div>
+    </div>
+</section>
+<!--services sec end-->
+<!--slider sec end-->
+<section id="portfolio" class="service-list section-padding">
+    <div class="container">
+        <div class="row text-center text-md-left">
+            <div class="col-12 service-text text-center">
+                <div class="our-heading">
+                    <h4 class="heading-text">PORTFOLIO</h4>
+                </div></div></div>
+        <div class="row text-center">
+            <div class="col-12 col-md-6  sparkle justify-content-center order-md-1 order-1"><!--- u-hover--sparkle --->
+                <div class="media-box wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+                    <span class="media-icon">
+                       <span class="hover-line"></span><i class="las la-shield-alt"></i>
+                    </span>
+                    <div class="media-body">
+                        <span class="heading-title">PRODUKT PRÄSENTATION</span>
+                        <h5 class="small-heading mt-0">Avast Secure Browser</h5>
+                        <iframe width="500" height="300"  src="https://www.youtube.com/embed/ymMeC67D520?controls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6  sparkle justify-content-center order-md-2 order-2"> <!--- u-hover--sparkle --->
+                <div class="media-box wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                    <span class="media-icon">
+                       <span class="hover-line"></span><i class="las la-carrot"></i>
+                    </span>
+                    <div class="media-body">
+                        <span class="heading-title">WERBUNG</span>
+                        <h5 class="small-heading mt-0">Every Foods</h5>
+                        <video width="400" height="300" controls controlsList="nodownload">
+                            <source src="videoSample.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                          </video>                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 media sparkle  order-md-3 order-3"><!--- u-hover--sparkle --->
+                <div class="media-box wow fadeInLeft" style="width:100%" data-wow-delay="350ms" style="visibility: visible; animation-delay: 350ms; animation-name: fadeInLeft;">
+                    <span class="media-icon">
+                       <span class="hover-line"></span><i class="las la-download"></i>
+                    </span>                    <div class="media-body">
+                        <a class="btn anim-btn rounded-pill" href="samples.zip" download> DEMOS HERUNTERLADEN
+                            <span></span><span></span><span></span><span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--Quote sec start-->
+<section id="quote-sec" class="quote-sec">
+    <div class="quote-overlay"></div>
+    <div class="container">
+    <div class="row">
+        <div class="col-12 text-center d-flex justify-content-center">
+            <div class="q-detail">
+            <p class="quote-text"><i class="fas fa-quote-left"></i>
+<!--                Creativity is allowing yourself to make mistakes-->
+<!--                Art is knowing which ones to keep-->
+                Some people dream of success, while other people get up every morning and make it happen.
+                <i class="fas fa-quote-right"></i></p>
+            <h4 class="quote-writer mb-0">- ALICE JOHNSON -</h4>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!--Quote sec end-->
+
+<!-- Footer sec start-->
+<div class="footer-sec" id="footer-sec">
+    <div class="container">
+        <div class="row">
+            <div class=" justify-content-around col-12 mt-auto mb-auto">
+                    <div class=" d-lg-block"><span><i class="la la-mobile"></i></span> +(49)152 02409460</div>
+                    <div class=" d-lg-block"><span><i class="la la-envelope"></i></span> booking@nicolewidiger.com</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="social-icons d-flex">
+                        <a href="https://www.linkedin.com/in/nicole-widiger/" target="_blank" class="wow fadeInDown"><i class="lab la-linkedin-in"></i> </a>
+                        <a href="https://www.instagram.com/nicilazaridi/" target="_blank" class="wow fadeInUp"><i class="lab la-instagram"></i> </a>
+                    </div>
+                </div>
+            <div class="col-12">
+                <p class="rites text-center small-text"><a href="/impressum.html" target="_blank" style="color: inherit; text-decoration:none;">Impressum</a></p>
+                <p class="rites text-center small-text">&copy; 2022 Nicole Widiger</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer sec End -->
+
+<script src="vendor/js/bundle.min.js"></script>
+<script src="vendor/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendor/js/jquery.cubeportfolio.min.js"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS -->
+<script src="vendor/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="vendor/js/extensions/revolution.extension.video.min.js"></script>
+<script src="vendor/js/parallaxie.min.js"></script>
+<script src="vendor/js/owl.carousel.min.js"></script>
+<script src="vendor/js/wow.min.js"></script>
+<script src="agency/js/script.js"></script>
 </body>
 </html>
