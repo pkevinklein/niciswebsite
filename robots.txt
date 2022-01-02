@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: http://nicolewidiger.com/
+Disallow: /
